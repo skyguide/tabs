@@ -6,7 +6,8 @@ module.exports = function(config) {
         reporters: ['progress', 'coverage'],
         preprocessors: {
             'src/**/*.js': ['commonjs', 'coverage'],
-            'bower_components/bskyb-*/src/**/*.js': ['commonjs'],
+            'bower_components/bskyb-core/src/**/*.js': ['commonjs'],
+            'bower_components/jquery/dist/jquery.js': ['commonjs'],
             'test/**/*.js': ['commonjs'],
             '_site/*.html': ['html2js']
         },
@@ -19,17 +20,18 @@ module.exports = function(config) {
                         return browser.toLowerCase().split(/[ /-]/)[0];
                     },
                     watermarks: {
-                        statements: [75, 85],
-                        lines: [75, 85],
-                        functions: [75, 85],
-                        branches:[50, 85]
+                        statements: [0, 85], //75
+                        lines: [0, 85],//75
+                        functions: [0, 85],//75
+                        branches:[0, 85]//75
                     }},
                 { type: 'json-summary', subdir: '.', file: 'summary.json' },
             ]
         },
         files: [
             {pattern: '_site/*.html', watched: false },
-            {pattern: 'bower_components/bskyb-*/src/**/*.js', included: true },
+            {pattern: 'bower_components/bskyb-core/src/**/*.js', included: true },
+            {pattern: 'bower_components/jquery/dist/jquery.js', included: true },
             {pattern: '_site/**/*.*', included: false, served: true},
             'src/**/*.js',
             'test/**/*.spec.js'

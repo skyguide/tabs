@@ -1,19 +1,23 @@
 {
-    "name": "bskyb-tabs",
-    "version": "0.0.0",
-    "homepage": "https://github.com/skyguide/tabs.git",
-    "authors": [
-        "telly <telly@bskyb.com>"
-    ],
-    "description": "tabs",
-    "main": "dist",
-    "license": "BSD3",
-    "ignore": [
-        "**/*",
-        "!dist/**/*",
-        "!src/**/*"
-    ],
-    "devDependencies": {
-        "bskyb-core": "~0.0.4"
-    }
+  "name": "bskyb-tabs",
+  "version": "0.0.1",
+  "homepage": "https://github.com/skyguide/tabs.git",
+  "authors": [
+    "telly <telly@bskyb.com>"
+  ],
+  "description": "tabs",
+  "main": "dist",
+  "license": "BSD3",
+  "ignore": [
+    "**/*",
+    "!dist/**/*",
+    "!src/**/*"
+  ],
+  "devDependencies": {
+    "bskyb-core": "~0.0.4"
+  },
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "bskyb-hash-manager": "~0.2.3"
+  }
 }

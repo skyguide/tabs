@@ -1,6 +1,290 @@
 //Import any bower dependencies as so:
-//@import 'bower_components/bskyb-core/src/styles/modules/colours';
+@import 'bower_components/bskyb-core/src/styles/modules/colours';
 
-body{
-  content: 'example css';
+$tab-height: 45px;
+
+.clearfix:before,
+.clearfix:after {
+    content:'';
+    display:table;
+    clear:both;
+}
+
+.tabpanel {
+  display: none;
+  width: 100%;
+  &.selected {
+    display: block;
+  }
+}
+
+.tabcontents {
+  img {
+    max-width: 100%;
+  }
+}
+
+/* tab dropdown */
+.dropdown-tab-select {
+  box-sizing:border-box;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 21px;
+  z-index:10;
+
+  a {
+    color: $primary;
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+  }
+
+  .selector {
+    box-sizing:border-box;
+    font-family: 'skyTextMedium';
+    font-size:32px;
+    line-height: 31px;
+    text-align: center;
+    position:relative;
+    height: $tab-height + 1px;
+    width:44px;
+    margin-bottom: -1px;
+    padding: 0;
+    border:1px solid transparent;
+    border-top:0;
+    color:$secondary;
+    z-index: 1;
+    cursor: pointer;
+
+    &.dropdown-tab-selected{
+      visibility: visible;
+      color: #0073c5;
+      background-color: #fff;
+      border-color:#dcdcdc;
+      border-bottom-color: #fff;
+      border-bottom: 1px solid transparent;
+
+      .whole-page & {
+        border-top: 1px solid #dcdcdc;
+      }
+    }
+  }
+}
+
+.more-tabs {
+  box-sizing:border-box;
+  visibility: hidden;
+  background: $white;
+  border: 1px solid #dcdcdc;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  list-style: none;
+  .whole-page & {
+    top: $tab-height - 1px;
+  }
+
+
+  &.dropdown-tab-selected{
+    visibility: visible;
+  }
+  li {
+    padding: 8px 10px;
+    float: none;
+    &:hover, &:hover a {
+      text-decoration: underline;
+      color:$link;
+      cursor: pointer;
+      float:none;
+    }
+
+    &.dropped {
+      display: none;
+    }
+  }
+}
+
+
+.tabs-container.page-nav {
+  position: relative;
+
+  .tabs {
+      list-style:none;
+    position: relative;
+    margin: 20px 0;
+    padding-right: 46px;
+    border-bottom: solid 1px #dcdcdc;
+    border-top: solid 1px #dcdcdc;
+
+  }
+  &.whole-page .tabs {
+    border-top: 0;
+  }
+
+  .tabs > .tab {
+    box-sizing:border-box;
+    float: left;
+    padding: 0 30px 0 0;
+    height: $tab-height;
+    max-width: 109%;
+
+
+    a {
+      line-height: $tab-height - 1px;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      display: block;
+    }
+    &:hover{
+      a{
+        border-bottom: 2px solid #0073c5;
+        color:$link;
+      }
+    }
+    &.dropped,
+    &.dropped-during-interaction {
+      width: 0;
+      padding-right: 0;
+      overflow: hidden;
+
+      &.given-focus {
+        width: auto;
+        padding-right: 30px;
+      }
+    }
+
+    &.selected {
+      width: auto;
+      padding-right: 30px;
+
+      a {
+        font-family: 'skyTextMedium';
+        border-bottom: 2px solid #0073c5;
+      }
+    }
+
+
+    &:only-of-type {
+      padding-right: 0;
+      max-width: 100%;
+    }
+  }
+}
+
+.tabs-container.classic {
+  position: relative;
+  .tabs{
+    font-size: 1.25em;
+    margin: 20px 0;
+    padding-right: 46px;
+    border-bottom: solid 1px #d7d5d5;
+  }
+  .tabs > .tab {
+    box-sizing:border-box;
+    float: left;
+    margin-right: 4px;
+    position: relative;
+    border: solid 1px #bbbbbb;
+    background: #eee;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 0;
+    bottom: -11px;
+
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 1.5%;
+      width: 97%;
+      height: 14px;
+      background: rgba(255, 255, 255, 0.7);
+      background : linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+      border-radius: 0 0 20px 20px;
+      transition :opacity .25s;
+    }
+
+    &:hover,
+    &:focus {
+      &:before {
+        opacity: 0;
+      }
+    }
+    a{
+      position: relative;
+      color: #333;
+      display: block;
+      text-align: center;
+      padding: 0 40px;
+      line-height: 32px;
+      height: 32px;
+      transition :background-color .25s;
+    }
+
+    &.dropped,
+    &.dropped-during-interaction {
+      width: 0;
+      padding-right: 0;
+      border-width: 0;
+
+      a {
+        padding: 0;
+      }
+
+      &.given-focus {
+        width: auto;
+        border-width: 1px;
+
+        a {
+          padding: 0 40px;
+        }
+      }
+    }
+
+    &.selected {
+      margin-bottom: -1px;
+      background-color: #fff;
+      bottom: 0;
+      font-size: 1.2em;
+
+      &:before {
+        background: rgba(255, 255, 255, 0.25);
+        background : linear-gradient(top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
+      }
+
+      a {
+        text-decoration: none;
+        cursor: default;
+        height: $tab-height - 1px;
+        line-height: $tab-height - 1px;
+      }
+    }
+
+    &:only-of-type {
+      max-width: 100%;
+
+      a {
+        text-align: left;
+      }
+    }
+  }
+}
+.classic .dropdown-tab-select{
+  >a{
+    border-top:1px solid transparent;
+    height:$tab-height - 1px;
+  }
+  a.dropdown-tab-selected{
+    height:$tab-height - 1px;
+    border-radius: 5px 5px 0 0;
+    border-top:1px solid #dcdcdc;
+  }
+  ul a{
+    font-size: 16px;
+  }
+}
+.classic .more-tabs{
+  z-index: 5;
+  top: $tab-height - 1px;
 }

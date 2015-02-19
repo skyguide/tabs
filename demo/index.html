@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="styles/demo.css"/>
     <link rel="stylesheet" href="styles/tabs.css"/>
-    <script type="text/javascript" src="scripts/tabs.js"></script>
+    <script type="text/javascript" src="scripts/tabs.jquery.js"></script>
 </head>
 <body>
 
@@ -25,11 +25,13 @@
     </h1>
 
     <p>
-        Demo component here!
+            If reinitialising tabs (e.g. after transition in a single-page app), call '<code>toolkit.hashManager.resetHash()</code>' first.
+
     </p>
 </div>
 
 
+
 <div class="demo-container">
-    {{> _includes/**/*.html }}
+    {{> _includes/*.html }}
 </div>
