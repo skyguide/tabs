@@ -1,7 +1,7 @@
-[tabs]({{ git.io-URL }})  [![Circle CI](https://circleci.com/gh/{{ git.username }}/tabs/tree/master.svg?style=svg)](https://circleci.com/gh/{{ git.username }}/tabs/tree/master)
+[tabs](http://skyguide.github.io/tabs)  [![Circle CI](https://circleci.com/gh/skyguide/tabs/tree/master.svg?style=svg)](https://circleci.com/gh/skyguide/tabs/tree/master)
 ========================
 
-> Please take a look at the [demo page]({{ git.io-URL }})
+> Please take a look at the [demo page](http://skyguide.github.io/tabs)
 
 
 ## Quick-Start

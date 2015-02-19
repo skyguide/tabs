@@ -1,9 +1,9 @@
 {
     "name": "bskyb-tabs",
     "version": "0.0.0",
-    "homepage": "{{ git.HTTPS-URL }}",
+    "homepage": "https://github.com/skyguide/tabs.git",
     "authors": [
-        "{{ git.author }} <{{ git.email }}>"
+        "telly <telly@bskyb.com>"
     ],
     "description": "tabs",
     "main": "dist",

@@ -15,9 +15,9 @@ To build the component locally, you'll need to install:
 
 1. Fork the project
 2. Clone down your fork
-`git clone {{ git.SSH-URL }}`
+`git clone git@github.com:skyguide/tabs.git`
 3. Setup your 'upstream'
-`git remote add upstream {{ git.HTTPS-URL }}`
+`git remote add upstream https://github.com/skyguide/tabs.git`
 4. Create a topic branch to contain your change
 `git checkout -b feature-my-feature`
 5. Make sure [CHANGELOG.md](./CHANGELOG.md) includes a summary of your changes in a new version number heading
