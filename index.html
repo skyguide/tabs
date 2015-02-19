@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--To put correct ie classes on document root to essentially enable css conditionals-->
+<!--[if IE 7]>         <html class="lt-ie10 lt-ie9 lt-ie8" > <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie10 lt-ie9" > <![endif]-->
+<!--[if IE 9]>         <html class="lt-ie10" > <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" > <!--<![endif]-->
+<!--end css conditionals-->
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>tabs</title>
+
+    <link rel="stylesheet" href="styles/demo.css"/>
+    <link rel="stylesheet" href="styles/tabs.css"/>
+    <script type="text/javascript" src="scripts/tabs.jquery.js"></script>
+</head>
+<body>
+
+<div class="demo-container">
+    <h1>tabs
+        <small  class="demo-version text--secondary">v0.0.1
+            <a href="" class="text--secondary">
+                <span class="demo-icon demo-icon--github"  aria-hidden=true></span>
+                <span class="speak">Github Repo</span>
+            </a></small>
+    </h1>
+
+    <p>
+            If reinitialising tabs (e.g. after transition in a single-page app), call '<code>toolkit.hashManager.resetHash()</code>' first.
+
+    </p>
+</div>
+
+
+
+<div class="demo-container">
+<section class="module clearfix tabs-container page-nav" data-function="tabs" id='demo-inpage-nav-tabs'>
+
+    <h2 class="speak">This is a screenreader header for tabs</h2>
+
+    <ul class="tabs clearfix" role="tablist">
+        <li id="first-tab" aria-controls="first" aria-label="first" role="tab" class="tab selected">
+            <a href="#!first" class="ellipsis internal-link"><span>First</span></a>
+        </li>
+        <li id="second-tab" aria-controls="second" aria-label="second" role="tab" class="tab" >
+            <a href="#!second" class="ellipsis internal-link"><span>SecondSecond</span></a>
+        </li>
+        <li id="third-tab" aria-controls="third" aria-label="third" role="tab" class="tab" >
+            <a href="#!third" class="ellipsis internal-link"><span>Praesent ullamcorper tincidunt fermentum primis in faucibus orci luctus</span></a>
+        </li>
+        <li id="fourth-tab" aria-controls="fourth" aria-label="fourth" role="tab" class="tab" >
+            <a href="#!fourth" class="ellipsis internal-link"><span>FourthFourth</span></a>
+        </li>
+        <li id="fifth-tab" aria-controls="fifth" aria-label="fifth" role="tab" class="tab">
+            <a href="#!fifth" class="ellipsis internal-link"><span>FifthFifthFifthFifth</span></a>
+        </li>
+        <li id="sixth-tab" aria-controls="sixth" aria-label="sixth" role="tab" class="tab" >
+            <a href="#!sixth" class="ellipsis internal-link"><span>Sixth</span></a>
+        </li>
+        <li id="seventh-tab" aria-controls="seventh" aria-label="seventh" role="tab" class="tab">
+            <a href="#!seventh" class="ellipsis internal-link"><span>Praesent ullamcorper tincidunt fermentum primis in faucibus orci luctus</span></a>
+        </li>
+        <li id="eighth-tab" aria-label="eighth" role="tab" class="tab">
+            <a href="/" class="ellipsis internal-link"><span>This link should perform a reload of the page</span></a>
+        </li>
+    </ul>
+
+    <div class="dropdown-tab-select">
+        <div href="#!" aria-hidden="true" class="medium selector">&hellip;</div>
+        <ul class="more-tabs">
+
+        </ul>
+    </div>
+
+    <div id="first" class="tabpanel selected" aria-labeledby="first-tab" role="tabpanel">
+        <section class="tabcontents clearfix">
+            <h2 class="speak">Screen reader header for First tab contents</h2>
+            <div class="skycom-12 alpha">
+                <img src="static/wiki_images/beckham.jpg" alt="beckham looking for help">
+            </div>
+        </section>
+    </div>
+
+    <div id="second" class="tabpanel" aria-labeledby="second-tab" role="tabpanel">
+        <section class="tabcontents clearfix">
+            <h2 class="speak">Screen reader header for Second tab contents</h2>
+            <div class="skycom-12 alpha">
+                <img src="static/wiki_images/smash.jpg" alt="something else">
+            </div>
+        </section>
+    </div>
+
+    <div id="third" class="tabpanel" aria-labeledby="third-tab" role="tabpanel">
+        <section class="tabcontents clearfix">
+            <h2 class="speak">Screen reader header for Third tab contents</h2>
+            <div class="skycom-12 alpha">
+                <img src="static/wiki_images/beckham.jpg" alt="something else">
+            </div>
+        </section>
+    </div>
+
+    <div id="fourth" class="tabpanel" aria-labeledby="fourth-tab" role="tabpanel">
+        <section class="tabcontents clearfix">
+            <h2 class="speak">Screen reader header for Fourth tab contents</h2>
+            <div class="skycom-12 alpha">
+                <img src="static/wiki_images/smash.jpg" alt="something else">
+            </div>
+        </section>
+    </div>
+
+    <div id="fifth" class="tabpanel" aria-labeledby="fifth-tab" role="tabpanel">
+        <section class="tabcontents clearfix">
+            <h2 class="speak">Screen reader header for Fifth tab contents</h2>
+            <div class="skycom-12 alpha">
+                <img src="static/wiki_images/beckham.jpg" alt="something else">
+            </div>
+        </section>
+    </div>
+
+    <div id="sixth" class="tabpanel" aria-labeledby="sixth-tab" role="tabpanel">
+        <section class="tabcontents clearfix">
+            <h2 class="speak">Screen reader header for Sixth tab contents</h2>
+            <div class="skycom-12 alpha">
+                <img src="static/wiki_images/smash.jpg" alt="something else">
+            </div>
+        </section>
+    </div>
+
+    <div id="seventh" class="tabpanel" aria-labeledby="seventh-tab" role="tabpanel">
+        <section class="tabcontents clearfix">
+            <h2 class="speak">Screen reader header for Seventh tab contents</h2>
+            <div class="skycom-12 alpha">
+                <img src="static/wiki_images/beckham.jpg" alt="something else">
+            </div>
+        </section>
+    </div>
+
+    <div id="eighth" class="tabpanel" aria-labeledby="eighth-tab" role="tabpanel">
+        <section class="tabcontents clearfix">
+            <h2 class="speak">Screen reader header for Seventh tab contents</h2>
+            <div class="skycom-12 alpha">
+                <img src="static/wiki_images/smash.jpg" alt="something else">
+            </div>
+        </section>
+    </div>
+
+</section>
+
+<script>
+$('#demo-inpage-nav-tabs').tabs();
+
+</script>
+
+<section class="module clearfix tabs-container page-nav whole-page" data-function="tabs" id='demo-whole-page-nav-tabs'>
+
+    <h2 class="speak">This is a screenreader header for tabs</h2>
+
+    <ul class="tabs clearfix" role="tablist">
+        <li id="whole-page-first-tab" aria-label="first" role="tab" class="tab selected">
+            <a href="#!whole-page-first" class="ellipsis internal-link"><span>First</span></a>
+        </li>
+        <li id="whole-page-second-tab" aria-label="second" role="tab" class="tab" >
+            <a href="#!whole-page-second" class="ellipsis internal-link"><span>SecondSecond</span></a>
+        </li>
+        <li id="whole-page-third-tab" aria-label="third" role="tab" class="tab" >
+            <a href="#!whole-page-third" class="ellipsis internal-link"><span>Praesent ullamcorper tincidunt fermentum primis in faucibus orci luctus</span></a>
+        </li>
+        <li id="whole-page-fourth-tab" aria-label="fourth" role="tab" class="tab" >
+            <a href="#!whole-page-fourth" class="ellipsis internal-link"><span>FourthFourth</span></a>
+        </li>
+        <li id="whole-page-fifth-tab" aria-label="fifth" role="tab" class="tab">
+            <a href="#!whole-page-fifth" class="ellipsis internal-link"><span>FifthFifthFifthFifth</span></a>
+        </li>
+        <li id="whole-page-sixth-tab" aria-label="sixth" role="tab" class="tab" >
+            <a href="#!whole-page-sixth" class="ellipsis internal-link"><span>Sixth</span></a>
+        </li>
+        <li id="whole-page-seventh-tab" aria-label="seventh" role="tab" class="tab">
+            <a href="#!whole-page-seventh" class="ellipsis internal-link"><span>Praesent ullamcorper tincidunt fermentum primis in faucibus orci luctus</span></a>
+        </li>
+    </ul>
+    <div class="dropdown-tab-select">
+        <div aria-hidden="true" class="medium selector">&hellip;</div>
+        <ul class="more-tabs">
+
+        </ul>
+    </div>
+</section>
+<script>
+$('#demo-whole-page-nav-tabs').tabs();
+</script>
+</div>
